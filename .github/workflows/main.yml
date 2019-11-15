@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    runs-on: [linux]
+    runs-on: linux
     container:
       image: nixorg/nix
       env:
