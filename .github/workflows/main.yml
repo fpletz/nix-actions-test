@@ -4,11 +4,11 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [linux]
     container:
       image: nixorg/nix
       env:
-        NIX_PATH: nixpkgs=https://nixos.org/channels/nixos-19.09/nixexprs.tar.xz
+        NIX_PATH: nixpkgs=channel:nixos-19.09
 
     steps:
     - uses: actions/checkout@v1
