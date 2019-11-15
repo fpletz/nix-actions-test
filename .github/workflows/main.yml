@@ -7,8 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: nixorg/nix
+      env:
+        NIX_PATH: nixpkgs=https://nixos.org/channels/nixos-19.09/nixexprs.tar.xz
 
     steps:
     - uses: actions/checkout@v1
-    - run: echo $NIX_PATH
     - run: nix-build
